@@ -17,7 +17,6 @@ class WeatherController extends Controller
     public function show(Request $request){
         $client = new Client();
         $res = $client->get('https://api.openweathermap.org/data/2.5/forecast?q='.$request->action.',JP&appid=61e8b6efbe427affcd1c6ff625ee5b91',['verify' => false]);
-        //return $res->getStatusCode(); // 200
         $decoded = json_decode($res->getBody());
         return $res->getBody();
         var_dump($decoded);
@@ -30,7 +29,6 @@ class WeatherController extends Controller
             $country = 'JP';
         }
         $res = $client->get('https://api.openweathermap.org/data/2.5/forecast?q='.strtolower($request->city).','.$country.'&appid=61e8b6efbe427affcd1c6ff625ee5b91&units=metric',['verify' => false]);
-        //return $res->getStatusCode(); // 200
         $decoded = json_decode($res->getBody());
         return $decoded->list;
     }
@@ -46,7 +44,6 @@ class WeatherController extends Controller
     }
 
     public function showPlacesFilter(Request $request){
-        error_log(strtolower($request->city). strtolower($request->data));
         if(strtolower($request->country) == 'japan'){
             $country = 'JP';
         }
