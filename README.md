@@ -2,7 +2,7 @@
 
 This simple system contains weather forecast and few places to visit on JAPAN depending what the user has chosen. Leggo system is mobile ready system and already following the best practices for Vue3. Code implementation for laravel are already following the PHP Standard Recommendation. 
 
-##Quick Summary for each Page
+###Quick Summary for each Page
 
 ### Home 
 Contains the fewer details for Weather forecast and Places. The details shown depends on the user's choice for the city. 
