@@ -1,4 +1,4 @@
-# leggo
+# Leggo
 
 This simple system contains weather forecast and places to vist on JAPAN depending what the user has chosen. Leggo system is mobile ready system and already following the best practices for Vue3. Code implementation for laravel are already following the PHP Standard Recommendation. 
 
